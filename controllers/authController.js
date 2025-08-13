@@ -41,6 +41,13 @@ export const logIn = async (req, res)=>{
 
 }
 
+
+export const logOut = (req, res)=>{
+    res.cookie('jwt', '', {maxAge:1});
+    
+
+}
+
 export const get = (req, res)=>{
     res.send('hello world')
 
