@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 
 
 const maxAge = 3 * 24 * 60 * 60 ;
-// const jwtSignature = process.env.JWT ;
+// const jwtSignature = process.env.JWT;
 const createToken = (id)=>{
     return jwt.sign({id},'teacher secret', {expiresIn:maxAge})
 }
@@ -44,7 +44,7 @@ export const logIn = async (req, res)=>{
 
 export const logOut = (req, res)=>{
     res.cookie('jwt', '', {maxAge:1});
-    
+
 
 }
 
